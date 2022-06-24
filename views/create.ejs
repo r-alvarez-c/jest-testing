@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <nav class="navbar navbar-dark"></nav>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <div class="card border-secondary">
+        <div class="card-header">Nuevo Registro</div>
+        <div class="card-body">
+          <form action="/save" method="POST">
+            <div class="mb-3">
+              <label for="firstname" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                placeholder="Ingrese nombre"
+                oninvalid="this.setCustomValidity('Por favor ingrese un nombre válido')"
+                oninput="this.setCustomValidity('')"
+                pattern="[a-zA-Z]+"
+                maxlength="30"
+                tabindex="1"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="lastname1" class="form-label">Primer Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname1"
+                name="lastname1"
+                placeholder="Ingrese primer apellido"
+                onkeydown="return /[a-z]/i.test(event.key)"
+                oninvalid="this.setCustomValidity('Por favor ingrese un primer Apellido válido')"
+                oninput="this.setCustomValidity('')"
+                pattern="[a-zA-Z]+"
+                maxlength="20"
+                tabindex="1"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="lastname2" class="form-label">Segundo Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname2"
+                name="lastname2"
+                placeholder="Ingrese segundo apellido"
+                tabindex="1"
+                maxlength="20"
+                onkeydown="return /[a-z]/i.test(event.key)"
+                pattern="[a-zA-Z]+"
+                oninvalid="this.setCustomValidity('Por favor ingrese un segundo Apellido válido')"
+                oninput="this.setCustomValidity('')"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="ejemplo@mail.com"
+                name="email"
+                maxlength="45"
+                oninvalid="this.setCustomValidity('Por favor ingrese un mail válido de la forma ejemplo@mail.com')"
+                oninput="this.setCustomValidity('')"
+                tabindex="1"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefono</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                tabindex="1"
+                pattern="[0-9]{9}"
+                placeholder="123456789"
+                oninvalid="this.setCustomValidity('Por favor ingresar un número de telefono válido de 9 dígitos')"
+                oninput="this.setCustomValidity('')"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary" tabindex="5">
+              Guardar
+            </button>
+            <a href="/" class="btn btn-secondary">Cancelar</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
