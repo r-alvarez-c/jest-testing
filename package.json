@@ -15,7 +15,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mysql": "^2.18.1",

@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
     if (error) {
       throw error;
     } else {
-      console.log(results);
+      //console.log(results);
       res.render("index.ejs", { results: results });
     }
   });
@@ -24,7 +24,7 @@ router.get("/edit/:id", (req, res) => {
     if (error) {
       throw error;
     } else {
-      console.log(results[0]);
+      //console.log(results[0]);
       res.render("edit.ejs", { user: results[0] });
     }
   });
