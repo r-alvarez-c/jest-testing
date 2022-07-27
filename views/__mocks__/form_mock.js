@@ -1,7 +1,7 @@
 export const valid = {
-  username: "test username",
-  lastname1: "test lastname one",
-  lastname2: "test lastname two",
+  username: "testusername",
+  lastname1: "testlastnameone",
+  lastname2: "testlastnametwo",
   email: "test@mail.com",
   phone: 987654321,
 };
